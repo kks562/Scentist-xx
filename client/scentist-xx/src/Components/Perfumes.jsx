@@ -142,7 +142,7 @@ const Perfumes = () => {
   } = themeColors[selectedCategory] || themeColors.Default;
 
   useEffect(() => {
-    axios.get('http://localhost:3001/perfumes')
+    axios.get('https://scentist-xx.onrender.com/perfumes')
       .then(response => {
         let perfumesData = response.data.perfumes || response.data;
 

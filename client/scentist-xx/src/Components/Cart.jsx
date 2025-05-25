@@ -28,7 +28,7 @@ const CartPage = () => {
 
   const fetchCartItems = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:3001/api/cart/${id}`);
+      const res = await axios.get(`https://scentist-xx.onrender.com/api/cart/${id}`);
       setCartItems(res.data || []);
       localStorage.setItem('cartCount', (res.data || []).length.toString());
     } catch (err) {
@@ -39,7 +39,7 @@ const CartPage = () => {
   const handleRemove = async (cartItemId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3001/api/cart/${cartItemId}`, {
+      await axios.delete(`https://scentist-xx.onrender.com/api/cart/${cartItemId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedItems = cartItems.filter(item => item._id !== cartItemId);

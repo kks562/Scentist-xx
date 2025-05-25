@@ -111,7 +111,7 @@ const ProductDetails = () => {
       setAnimateItems(prev => [...prev, { id: Date.now() }]);
 
       const res = await axios.post(
-        'http://localhost:3001/api/cart/add',
+        'https://scentist-xx.onrender.com/api/cart/add',
         { product },
         { headers: { Authorization: `Bearer ${token}` } }
       );

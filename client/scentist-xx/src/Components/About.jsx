@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Typography, Avatar, Stack, Link } from '@mui/material';
+import { Box, Typography, Avatar, Stack, Link, Button } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useNavigate } from 'react-router-dom';
+
 import profile from '../assets/new.jpg';
 import gfg from '../assets/gfg.png';
 import linkedin from '../assets/linked.png';
 import leetcode from '../assets/leet.png';
-import { Button } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useNavigate } from 'react-router-dom'; 
 
 const About = () => {
   const navigate = useNavigate();
@@ -15,13 +15,13 @@ const About = () => {
     <Box
       sx={{
         minHeight: '100vh',
-        position: 'relative',
         px: 2,
         py: 8,
         overflow: 'hidden',
         background: 'linear-gradient(to bottom right, #6A0DAD, #FFD700)',
         color: 'white',
         textAlign: 'center',
+        position: 'relative',
         '&::before': {
           content: '""',
           position: 'absolute',
@@ -41,33 +41,33 @@ const About = () => {
       }}
     >
       <Button
-              variant="contained"
-              startIcon={<ArrowBackIcon />}
-              onClick={() => navigate(-1)}
-              sx={{
-                mt: 2,
-                ml: 2,
-                px: 3,
-                py: 1,
-                position: 'absolute',
-  top: -14,
-  left: -650,
-                fontWeight: 'bold',
-                color: 'white',
-                background: 'linear-gradient(90deg, #6A0DAD, gold)',
-                borderRadius: 2,
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
-                textTransform: 'none',
-                '&:hover': {
-                  background: 'linear-gradient(90deg, #5a009d, goldenrod)',
-                  boxShadow: '0 6px 15px rgba(0, 0, 0, 0.25)',
-                },
-                position: 'relative',
-                zIndex: 2,
-              }}
-            >
-              Back to Home
-            </Button>
+        variant="contained"
+        startIcon={<ArrowBackIcon />}
+        onClick={() => navigate(-1)}
+        sx={{
+          mt: 2,
+          ml: 2,
+          px: 3,
+          py: 1,
+          position: 'absolute',
+          top: 10,
+          left: 10,
+          fontWeight: 'bold',
+          color: 'white',
+          background: 'linear-gradient(90deg, #6A0DAD, gold)',
+          borderRadius: 2,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+          textTransform: 'none',
+          '&:hover': {
+            background: 'linear-gradient(90deg, #5a009d, goldenrod)',
+            boxShadow: '0 6px 15px rgba(0, 0, 0, 0.25)',
+          },
+          zIndex: 2,
+        }}
+      >
+        Back to Home
+      </Button>
+
       <Box
         sx={{
           position: 'relative',
@@ -75,6 +75,7 @@ const About = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          mt: 6,
         }}
       >
         <Avatar
@@ -115,7 +116,9 @@ const About = () => {
                 alt="LinkedIn"
                 sx={{ width: 40, height: 40 }}
               />
-              <Typography mt={1} fontSize={14} color="white">LinkedIn</Typography>
+              <Typography mt={1} fontSize={14} color="white">
+                LinkedIn
+              </Typography>
             </Link>
           </Box>
 
@@ -135,7 +138,9 @@ const About = () => {
                 alt="LeetCode"
                 sx={{ width: 40, height: 40 }}
               />
-              <Typography mt={1} fontSize={14} color="white">LeetCode</Typography>
+              <Typography mt={1} fontSize={14} color="white">
+                LeetCode
+              </Typography>
             </Link>
           </Box>
 
@@ -155,7 +160,9 @@ const About = () => {
                 alt="GeeksforGeeks"
                 sx={{ width: 40, height: 40 }}
               />
-              <Typography mt={1} fontSize={14} color="white">GeeksforGeeks</Typography>
+              <Typography mt={1} fontSize={14} color="white">
+                GeeksforGeeks
+              </Typography>
             </Link>
           </Box>
         </Stack>

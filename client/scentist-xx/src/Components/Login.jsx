@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
 import { keyframes } from '@mui/system';
 
-const API = 'http://localhost:3001';
+const API = 'https://scentist-xx.onrender.com';
 
 export default function Login() {
   const [email, setEmail] = useState('');

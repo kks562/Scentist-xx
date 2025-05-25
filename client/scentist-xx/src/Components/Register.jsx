@@ -5,7 +5,7 @@ import { Container, TextField, Button, Typography, Box, Paper } from '@mui/mater
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
 
-const API = 'http://localhost:3001';
+const API = 'https://scentist-xx.onrender.com';
 
 export default function Register() {
   const [name, setName] = useState('');
