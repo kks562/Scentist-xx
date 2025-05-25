@@ -3,7 +3,7 @@ import { Box, Typography, Avatar, Stack, Link, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate } from 'react-router-dom';
 
-import profile from '../assets/new.jpg';
+import profile from '../assets/new.JPG';
 import gfg from '../assets/gfg.png';
 import linkedin from '../assets/linked.png';
 import leetcode from '../assets/leet.png';
