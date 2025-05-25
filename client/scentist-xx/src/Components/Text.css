@@ -1,0 +1,60 @@
+.text-gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-gradient h1 {
+  font-size: 48px; /* slightly smaller */
+  font-weight: 900; /* bold but not ultra-heavy */
+  background: linear-gradient(45deg, #ffcc00, #9b30ff); /* bright gold to vivid purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding: 10px 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+
+  position: relative;
+  /* subtle underline */
+  border-bottom: 3px solid #9b30ff; 
+}
+
+/* Add a glowing highlight underline effect */
+.text-gradient h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(45deg, #ffcc00, #9b30ff);
+  filter: blur(8px);
+  opacity: 0.7;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-gradient h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-gradient h1 {
+    font-size: 26px;
+  }
+}
