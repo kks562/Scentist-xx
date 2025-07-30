@@ -1,2 +1,2 @@
 🚀 Live Demo
-Check out the live project here: https://6833531247913f0ef21c8b0e--scentist-xx.netlify.app/
+Check out the live project here: https://6888d8e45866be0008ee9288--scentist-xx.netlify.app/
